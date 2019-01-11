@@ -1,0 +1,22 @@
+{
+  "name": "gulp-practice",
+  "version": "1.0.0",
+  "description": "gulp practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RexfordK/gulp-practice.git"
+  },
+  "author": "Rex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RexfordK/gulp-practice/issues"
+  },
+  "homepage": "https://github.com/RexfordK/gulp-practice#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
