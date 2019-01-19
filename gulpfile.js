@@ -1,4 +1,5 @@
 var gulp = require("gulp");
+var imagemin = require("gulp-imagemin");
 
 /*
     --Top LEVEL FUNCTIONS
@@ -7,20 +8,22 @@ var gulp = require("gulp");
     gulp.dest - Points to folder to output
     gulp.watech -Watch files and folders for change
 */
-
-// Logs Message
-//for gulp version 4.0 and up, I must:
-//https://stackoverflow.com/questions/36897877/gulp-error-the-following-tasks-did-not-complete-did-you-forget-to-signal-async
-
-
 // copy all html files
 gulp.task("copyHTML", function () {
     return gulp.src("src/*.html")
         .pipe(gulp.dest("dist"));
 });
 
+
+// optomize and minify images
+gulp.task('optImages', () =>
+    gulp.src('src/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/images'))
+);
+
 // gulp default tusk
 gulp.task("default", function (done) {
     done();
     return console.log("Gulp is running");
-})
+});
